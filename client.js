@@ -22,17 +22,18 @@ const connect = function() {
     console.log('Server says: ', data);
   });
 
-  stdin.on('data', (input) => {
-    let name = input[0] + input[1] + input[2]
+//   stdin.on('data', (input) => {
+//     let name = input[0] + input[1] + input[2]
    
-  console.log('Name:', name);
-  conn.write(name);
+//   console.log('Name:', name);
+  
  
   
-});
+// });
 
   conn.on('connect', () => {
     console.log('Connected to the server');
+    conn.write("Name: Bre");
     
   });
 
@@ -42,4 +43,4 @@ const connect = function() {
 
 
 
-module.exports = connect;
+module.exports = {connect};
