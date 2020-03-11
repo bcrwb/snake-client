@@ -18,6 +18,10 @@ const setUpInput = function(conn) {
                 connection.write('Move: right');
             }if(key === 's'){
                 connection.write('Move: down');
+            }if(key === 'l'){
+                connection.write('Say: LOSER');
+            }if(key === 'y'){
+                connection.write('Say: YOU SNAKE');
             }
         })
     })
